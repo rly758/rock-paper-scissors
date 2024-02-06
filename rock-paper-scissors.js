@@ -51,14 +51,50 @@ function playRound(computerSelection, playerSelection) {
     }
 
     if (result == "win") {
-        return "You Win! " + playerSelection + " beats " + computerSelection;
+        console.log("You Win! " + playerSelection + " beats " + computerSelection);
     } 
     else if (result == "lose") {
-        return "You Lose! " + computerSelection + " beats " + playerSelection;
+        console.log("You Lose! " + computerSelection + " beats " + playerSelection);
     }
     else {
-        return "It's a Tie! ";
+        console.log("It's a Tie! ");
     }
+
+    return result;
 }
 
-function playGame() {}
+function playGame() {
+    const ROUNDS = 5;
+    let playerWins = 0;
+    let computerWins = 0;
+    let ties = 0;
+
+    console.log("We will play " + ROUNDS + " of Rock, Paper, Scissors.");
+
+    for (let i=0;i<ROUNDS;i++) {
+        let playerSelection = prompt("Round " + (i+1) + " - Choose Rock, Paper, or Scissors: ");
+
+        let result = playRound(getComputerChoice(), playerSelection);
+
+        if (result == "win") {
+            playerWins++;
+        }
+        else if (result == "lose") {
+            computerWins++;
+        }
+        else {
+            ties++;
+        }
+
+        console.log("Player Wins: " + playerWins);
+        console.log("Computer Wins: " + computerWins);
+        console.log("Ties: " + ties);
+    }
+
+    if (playerWins == computerWins) {
+        console.log("This game of Rock, Paper, Scissors was a tie!");
+    }
+    else {
+        console.log(playerWins > computerWins ? "You win the game of Rock, Paper, Scissors!" : "You lose the game of Rock, Paper, Scissors!");
+    }
+}
