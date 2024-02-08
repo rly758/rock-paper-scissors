@@ -3,7 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock Paper Scissors</title>
-        <script src="rock-paper-scissors.js"></script>
+        <script src="rock-paper-scissors.js" defer></script>
     </head>
-    <body></body>
+    <body>
+        <h1>Rock, Paper, Scissors</h1>
+        <p>First to score 5 Round Wins will win the game!</p>
+        <p>Select your choice below.</p>
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+        <div class="record">
+            <p id="playerWins">Player Wins: 0 Wins</p>
+            <p id="computerWins">Computer Wins: 0 Wins</p>
+            <p id="ties">Ties: 0</p>
+            <p id="roundDetails"></p>
+        </div>
+    </body>
 </html>
