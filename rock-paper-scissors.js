@@ -79,11 +79,11 @@ function playGame(playerSelection) {
 
     if (result == "win") {
         playerWins++;
-        playerRecord.textContent = "Player Wins: " + playerWins + " Wins";
+        playerRecord.textContent = "Player Wins: " + playerWins;
     }
     else if (result == "lose") {
         computerWins++;
-        computerRecord.textContent = "Computer Wins: " + computerWins + " Wins";
+        computerRecord.textContent = "Computer Wins: " + computerWins;
     }
     else {
         ties++;
